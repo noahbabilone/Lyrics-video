@@ -1,0 +1,35 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+    {% include("LVBundle:Includes:nav.html.twig") %}
+    <header class="sb-page-header"></header>
+    {% block lv_body %}
+    {% endblock %}
+
+    <footer id="footer">
+        <div class="container">
+
+            <div class="row">
+                <ul class="list-unstyled list-inline">
+                    <li><a href="https://twitter.com/noahbabilone"><i class="fa fa-twitter fa-fw fa-lg"></i></a></li>
+                    <li><a href="https://github.com/noahbabilone"><i class="fa fa-github fa-fw fa-lg"></i></a></li>
+                    <li><a href="https://dribbble.com/noahbabilone"><i class="fa fa-dribbble fa-fw fa-lg"></i></a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/profile/preview?locale=fr_FR&trk=prof-0-sb-preview-primary-button"><i
+                                    class="fa fa-linkedin fa-fw fa-lg"></i></a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-5 col-lg-2">
+                    <p>Copyright &copy; YannDev 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

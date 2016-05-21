@@ -1,0 +1,318 @@
+{% extends "::base.html.twig" %}
+
+  {% block stylesheets %}
+      {{ parent() }}
+      {#{% stylesheets#}
+      {#filter='cssrewrite' %}#}
+      {#<link rel="stylesheet" href="{{ asset_url }}"/>#}
+      {#{% endstylesheets %}#}
+      <style type="text/css">
+
+
+      </style>
+  {% endblock %}
+                     {#src="{{ asset('bundles/lv/img/carousel/avengers.jpg') }}"#}
+
+{% block body %}
+    {% include("LVBundle:Includes:nav.html.twig") %}
+
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill"
+                     style="background-image:url('{{ asset('bundles/lv/img/carousel/background3.jpg') }}');"></div>
+                <div class="carousel-caption">
+                    <h2>Regarder vos clips préférés d'une autre façon</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill"
+                     style="background-image:url('{{ asset('bundles/lv/img/carousel/background1.jpg') }}');"></div>
+                <div class="carousel-caption">
+                        <h2>Laisser vous emporter par nos playlists</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill"
+                     style="background-image:url('{{ asset('bundles/lv/img/carousel/background2.jpg') }}');"></div>
+                <div class="carousel-caption">
+                    <h2>Toute la musique qu'il vous faut </h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+
+
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="page-header text-primary"> Nos services</h2>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="panel-body">
+                            <h4>Lyrics Vidéo</h4>
+
+                            <p>Partager vos clips préférés avec les paroles</p>
+                            <a href="#" class="btn btn-primary">Voir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="panel-body">
+                            <h4>Youtube</h4>
+
+                            <p>Regarder vos clips avec des sous-titres</p>
+                            <a href="#" class="btn btn-primary">Voir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-video-camera fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="panel-body">
+                            <h4>Playlist</h4>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-database fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="panel-body">
+                            <h4>Service Four</h4>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="page-header text-primary">Nos services</h2>
+                </div>
+                <div class="col-md-4">
+                    <div class="media">
+                        <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-camera fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Service One</h4>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit
+                                harum.</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-car fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Service Two</h4>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit
+                                harum.</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Service Three</h4>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit
+                                harum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="media">
+                        <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-database fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Service Four</h4>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit
+                                harum.</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-bomb fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Service Five</h4>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit
+                                harum.</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-bank fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Service Six</h4>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit
+                                harum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="media">
+                        <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-paper-plane fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Service Seven</h4>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit
+                                harum.</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-space-shuttle fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Service Eight</h4>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit
+                                harum.</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-recycle fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Service Nine</h4>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit
+                                harum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <div class="container">
+
+            <div class="row">
+                <ul class="list-unstyled list-inline">
+                    <li><a href="https://twitter.com/noahbabilone"><i class="fa fa-twitter fa-fw fa-lg"></i></a></li>
+                    <li><a href="https://github.com/noahbabilone"><i class="fa fa-github fa-fw fa-lg"></i></a></li>
+                    <li><a href="https://dribbble.com/noahbabilone"><i class="fa fa-dribbble fa-fw fa-lg"></i></a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/profile/preview?locale=fr_FR&trk=prof-0-sb-preview-primary-button"><i
+                                    class="fa fa-linkedin fa-fw fa-lg"></i></a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-5 col-lg-2">
+                    <p>Copyright &copy; YannDev 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}
+
+
+    {% block javascripts %}
+        {{ parent() }}
+
+
+        <script>
+            $('.carousel').carousel({
+                interval: 5000 //changes the speed
+            })
+        </script>
+    {% endblock %}
+

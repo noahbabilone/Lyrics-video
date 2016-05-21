@@ -1,0 +1,8 @@
+services:
+#    lv.example:
+#        class: LVBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+#         youtube_public_key: AIzaSyCtorGvb6lXN1txW8_x2yrxvg_RRH0cnec
+    youtube_api:
+        class: LVBundle\Service\Youtube  
+        arguments: [ '%youtube_public_key%']

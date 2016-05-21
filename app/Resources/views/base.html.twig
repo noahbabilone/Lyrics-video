@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Yann"/>
+    <title>{% block title %}Lyrics Video{% endblock %}</title>
+    {#<link rel="icon" type="image/png" href="{{ asset('images/favicon/favicon-96x96.png') }}"#}
+    {#sizes="96x96">#}
+
+    {% block stylesheets %}
+        {% stylesheets
+        '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'
+        'bundles/lv/css/style.css'
+        'bundles/lv/font-awesome/css/font-awesome.min.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+        {#
+                '//fonts.googleapis.com/icon?family=Material+Icons'
+           'bundles/lv/dist/css/bootstrap-material-design.css'
+           'bundles/lv/dist/css/ripples.min.css'
+           "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css"
+
+        #}
+    {% endblock %}
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascripts %}
+    {% javascripts
+    'https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'
+    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
+    'bundles/fosjsrouting/js/router.js'
+    'bundles/lv/js/app.js' %}
+
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+{% endblock %}
+
+</body>
+</html>
