@@ -18,8 +18,8 @@ class AppKernel extends Kernel
             new LVBundle\LVBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-            
-            );
+            new UserBundle\UserBundle(),
+        );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
