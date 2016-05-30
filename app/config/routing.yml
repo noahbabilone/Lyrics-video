@@ -1,12 +1,13 @@
-user:
-    resource: "@UserBundle/Controller/"
-    type:     annotation
-    prefix:   /
 
 lv:
     resource: "@LVBundle/Controller/"
     type:     annotation
     prefix:   /
-    
+        
+#FOS User Bundle
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+# app/config/routing.yml
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

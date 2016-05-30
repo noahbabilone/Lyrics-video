@@ -1,0 +1,55 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<div class="row col-sm-offset-1">
+    <div class="col-sm-5">
+        <h2>Inscription</h2>
+
+        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register form-horizontal'}}) }}
+        <div class="form-group">
+            <div class="col-sm-10">
+                {{ form_label(form.username, 'form.username'|trans , {'label_attr': {'class':'control-label'}}) }}
+
+            </div>
+            <div class="col-sm-12">
+                {{ form_widget(form.username,{ 'attr': {'class': "form-control", 'placeholder': 'form.username'|trans, 'autocomplete':'off' } }) }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_label(form.email, 'form.email'|trans , {'label_attr': {'class':'control-label'}}) }}
+            </div>
+            
+            <div class="col-sm-12">
+                {{ form_widget(form.email,{ 'attr': {'class': "form-control",  'placeholder': 'form.email'|trans , 'autocomplete':'off'} }) }}
+            </div>
+            
+            <div class="col-sm-10">
+                {{ form_label(form.plainPassword.first, 'form.password' |trans  , {'label_attr': {'class':'control-label'}}) }}
+
+            </div>
+            <div class="col-sm-12">
+                {{ form_widget(form.plainPassword.first,{ 'attr': {'class': "form-control",'placeholder': 'form.password'|trans  , 'autocomplete':'off'} }) }}
+            </div>
+            
+            <div class="col-sm-10">
+                {{ form_label(form.plainPassword.second, 'form.password_confirmation' |trans  , {'label_attr': {'class':'control-label'}}) }}
+            </div>
+            <div class="col-sm-12">
+                {{ form_widget(form.plainPassword.second,{ 'attr': {'class': "form-control",'placeholder': 'form.password_confirmation'|trans, 'autocomplete':'off' } }) }}
+            </div>
+ 
+
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10">
+                <input type="submit" id="_submit" name="_submit" class="btn btn-default"
+                       value="{{ 'registration.submit'|trans }}"/>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+    <div class="col-sm-6 col-sm-offset-1">
+        <h3>Vous êtes déjà inscrit ?</h3>
+
+        <p>
+            <a href="{{ path ('fos_user_security_login') }}" class="btn btn-primary btn-sm"> Connexion</a>
+        </p>
+    </div>
+</div>

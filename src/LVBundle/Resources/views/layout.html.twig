@@ -2,9 +2,10 @@
 {% block body %}
     {% include("LVBundle:Includes:nav.html.twig") %}
     <header class="sb-page-header"></header>
-    {% block lv_body %}
-    {% endblock %}
-
+    <div class="lv_body">
+        {% block lv_body %}
+        {% endblock %}
+    </div>
     <footer id="footer">
         <div class="container">
 
