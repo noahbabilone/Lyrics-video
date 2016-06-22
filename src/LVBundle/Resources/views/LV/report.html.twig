@@ -1,0 +1,37 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+    <div class="">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="page-header text-primary"><i class="fa fa-flag"></i> Signalements</h2>
+                {% if reports is defined %}
+
+                    <table class="table">
+                        <thead>
+                        <td>Titre vidéo</td>
+                        <td>user</td>
+                        <td>Report</td>
+                        <td>Date</td>
+                        <td>Actions</td>
+                        </thead>
+                        <tbody>
+                        {% for report in reports %}
+                            <td class="col-sm-5">{{ report.video.title | capitalize }}</td>
+                            <td class="col-sm-2">{{ report.user.username | capitalize }}</td>
+                            <td class="col-sm-1 text-danger">{{ report.title }}</td>
+                            <td class="col-sm-2">{{ report.date | date("d M Y à H:m") }}</td>
+                            <td class="col-sm-1 text-center">
+                                <a href="#"><span class="fa fa-edit"></span></a>
+                                <a href="#"><span class="fa fa-trash text-danger"></span></a>
+                            </td>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

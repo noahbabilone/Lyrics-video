@@ -74,12 +74,13 @@ class Video
     public function __construct()
     {
         $this->subTitle = new ArrayCollection();
+        $this->date = new \DateTime();
     }
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -102,7 +103,7 @@ class Video
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -125,7 +126,7 @@ class Video
     /**
      * Get idVideo
      *
-     * @return string 
+     * @return string
      */
     public function getIdVideo()
     {
@@ -148,7 +149,7 @@ class Video
     /**
      * Get image
      *
-     * @return string 
+     * @return string
      */
     public function getImage()
     {
@@ -171,7 +172,7 @@ class Video
     /**
      * Get lyrics
      *
-     * @return string 
+     * @return string
      */
     public function getLyrics()
     {
@@ -194,7 +195,7 @@ class Video
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -227,7 +228,7 @@ class Video
     /**
      * Get subTitle
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getSubTitle()
     {
@@ -250,7 +251,7 @@ class Video
     /**
      * Get user
      *
-     * @return User 
+     * @return User
      */
     public function getUser()
     {

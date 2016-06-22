@@ -16,7 +16,7 @@ class VideoType extends AbstractType
     {
         $builder
             ->add('title', 'text', array(
-                    'label' => '',
+                    'label' => 'Titre',
                     'required' => true,
                     'attr' => array(
                         'class' => 'form-control titre-video',

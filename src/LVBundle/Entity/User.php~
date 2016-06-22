@@ -1,0 +1,27 @@
+<?php
+
+namespace LVBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
+/**
+ * Video
+ *
+ * @ORM\Table(name="user")
+ * @ORM\Entity(repositoryClass="LVBundle\Repository\UserRepository")
+ */
+class User extends BaseUser
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+}

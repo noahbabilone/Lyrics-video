@@ -1,12 +1,12 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<div class="fos_user_user_show">
-    <div class="row col-sm-offset-1">
-        <div class="col-sm-7">
-            <h2>Mon compte</h2>
+<div class="">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="page-header text-primary"><i class="fa fa-user"></i> Mon compte</h2>
 
-            <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
-            <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+            <p> <b>{{ 'profile.show.username'|trans  }}:</b> {{ user.username }}</p>
+            <p><b>{{ 'profile.show.email'|trans }}</b>: {{ user.email }}</p>
         </div>
     </div>
 </div>
