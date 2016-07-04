@@ -6,6 +6,7 @@ use LVBundle\Entity\Comment;
 use LVBundle\Entity\Report;
 use LVBundle\Entity\User;
 use LVBundle\Entity\Video;
+use LVBundle\Form\VideoEditType;
 use LVBundle\Form\VideoType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -82,6 +83,33 @@ class LyricsVideoController extends Controller
     }
 
     /**
+     * @Route("/edit/{id}", name="edit_video")
+     * @param Request $request
+     * @return Response
+     */
+    public function editVideoAction(Request $request, $id)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $video = $em->getRepository('LVBundle:Video')->find($id);
+//        dump($video);
+//        die;
+        if (null === $video) {
+            throw $this->createNotFoundException("L'annonce demandée n'existe plus.");
+        }
+
+        $form = $this->createForm(new VideoEditType(), $video);
+        if ($form->handleRequest($request)->isValid()) {
+            
+        }
+        
+         return $this->render('LVBundle:LV:editVideo.html.twig', array(
+            'form' => $form->createView(),
+             'video' => $video,
+        ));
+    }
+
+    /**
      * @Route("/add-video.html", name="add_video")
      * @param Request $request
      * @return Response
@@ -104,8 +132,8 @@ class LyricsVideoController extends Controller
 
             }
             $user = $this->get('security.context')->getToken()->getUser();
-           // $user = $em->getRepository('LVBundle:User')->find($user->getId());
-            if(!$user){
+            // $user = $em->getRepository('LVBundle:User')->find($user->getId());
+            if (!$user) {
                 return new Response('Erreur à corriger');
             }
             $video->setUser($user);
@@ -274,13 +302,13 @@ class LyricsVideoController extends Controller
             $em->persist($report);
             $em->flush();
 
-            return new Response(json_encode(array('response' => true, "result"=>"ajouter")));
+            return new Response(json_encode(array('response' => true, "result" => "ajouter")));
         }
         return new response (json_encode(array('response' => false, "result" => "Error: isXmlHttpRequest")));
 
 
     }
-    
+
     /**
      * @Route("/report/watch={id}", name="report_video")
      * @param $id

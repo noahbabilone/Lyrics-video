@@ -18,8 +18,9 @@ class SubTitleType extends AbstractType
             ->add('startTime', 'time', array(
                     'label' => 'Début',
                     'required' => true,
+                    'widget' => 'single_text',
                     'attr' => array(
-                        'class' => 'start_time',
+                        'class' => 'start_time form-control input-sm',
                         'autocomplete' => 'off',
                     )
                 )
@@ -27,15 +28,16 @@ class SubTitleType extends AbstractType
             ->add('endTime', 'time', array(
                     'label' => 'Fin',
                     'required' => true,
+                    'widget' => 'single_text',
                     'attr' => array(
-                        'class' => 'end_time',
+                        'class' => 'end_time form-control input-sm',
 //                        'class' => 'form-control',
                         'autocomplete' => 'off',
                     )
                 )
             )
             ->add('text', 'textarea', array(
-                    'label' => '    ',
+                    'label' => '',
                     'required' => true,
                     'attr' => array(
                         'class' => 'form-control',
